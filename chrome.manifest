@@ -1,0 +1,3 @@
+content fireez chrome/content/fireez/ xpcnativewrappers=no
+
+overlay chrome://firebug/content/firebugOverlay.xul         chrome://fireez/content/FirebugOverlay.xul

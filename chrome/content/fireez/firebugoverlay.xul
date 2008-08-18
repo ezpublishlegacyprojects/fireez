@@ -1,0 +1,52 @@
+<?xml version="1.0"?> 
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"> 
+
+    <script type="application/x-javascript" src="chrome://fireez/content/firebugpanel.js"/> 
+
+    <commandset id="mainCommandSet"> 
+    
+        <command id="cmd_showAllErrorsFireEz" oncommand="Firebug.FireEz.showAllErrors()"/> 
+        <command id="cmd_showErrorsFireEz"    oncommand="Firebug.FireEz.showErrors()"/> 
+        <command id="cmd_showWarningsFireEz"  oncommand="Firebug.FireEz.showWarnings()"/> 
+        <command id="cmd_showNoticesFireEz"   oncommand="Firebug.FireEz.showNotices()"/> 
+
+    </commandset> 
+    
+    <toolbar id="fbToolbar" align="center"> 
+    
+        <hbox id="fbToolbarInner" insertbefore="fbDetachButton" flex="1" align="center"> 
+        
+            <hbox id="fbFireEzButtons" insertafter="fbNetButtons"> 
+
+                <toolbarbutton label       = "All"
+                               type        = "radio"
+                               class       = "toolbar-text-button" 
+                               tooltiptext = "Show all eZ Publish Errors" 
+                               command     = "cmd_showAllErrorsFireEz"/> 
+ 
+                <toolbarbutton label       = "Errors"
+                               type        = "radio"
+                               class       = "toolbar-text-button" 
+                               tooltiptext = "Show eZ Publish Errors" 
+                               command     = "cmd_showErrorsFireEz"/> 
+                               
+                <toolbarbutton label       = "Warnings"
+                               type        = "radio"
+                               class       = "toolbar-text-button" 
+                               tooltiptext = "Show eZ Publish Warnings" 
+                               command     = "cmd_showWarningsFireEz"/> 
+           
+                <toolbarbutton label       = "Notices"
+                               type        = "radio"
+                               class       = "toolbar-text-button" 
+                               tooltiptext = "Show eZ Publish Notices" 
+                               command     = "cmd_showNoticesFireEz"/> 
+                
+            </hbox> 
+
+        </hbox> 
+
+    </toolbar> 
+
+</overlay>
